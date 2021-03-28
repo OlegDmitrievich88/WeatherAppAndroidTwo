@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="city_name_margin_top" />
+    <dimen name="margin_15_dp" />
+    <dimen name="temperature_value_text_size" />
+    <dimen name="feels_like_text_size" />
+</resources>

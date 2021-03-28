@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">weatherTwoTwo</string>
+    <string name="temperature_label" />
+    <string name="feels_like_label" />
+    <string name="coordinats">55.755826, 37.617299900000035</string>
+    <string name="error">ERROR</string>
+</resources>
