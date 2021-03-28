@@ -11,7 +11,7 @@ import com.geekbrains.weathertwotwo.R
 import com.geekbrains.weathertwotwo.databinding.MainFragmentBinding
 import com.geekbrains.weathertwotwo.model.Weather
 import com.google.android.material.snackbar.Snackbar
-
+//homework
 class MainFragment : Fragment() {
 
     companion object {
