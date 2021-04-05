@@ -1,18 +1,23 @@
 package com.geekbrains.weathertwotwo.model
 
-data class Weather(
-    val city: City = getDefaultCity(),
-    val temperature: Int = 0,
-    val feelslike: Int = 0
-)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-fun getDefaultCity() =    //возвращает город по умолчанию
-    City(
-        "Moscow",
-        55.755826,
-        37.617299900000035
-    )
-fun getWorldCities(): List<Weather> {// метод возвращает города мира
+//data class Weather(
+//    val city: City = getDefaultCity(),
+//    val temperature: Int = 0,
+//    val feelslike: Int = 0
+//)
+@Parcelize
+data class Weather(
+        val city: City = getDefaultCity(),
+        val temperature: Int = 0,
+        val feelslike: Int = 0
+) : Parcelable
+
+fun getDefaultCity() = City("Москва", 55.755826, 37.617299900000035)
+
+fun getWorldCities(): List<Weather> {
     return listOf(
             Weather(City("Лондон", 51.5085300, -0.1257400), 1, 2),
             Weather(City("Токио", 35.6895000, 139.6917100), 3, 4),
@@ -27,7 +32,7 @@ fun getWorldCities(): List<Weather> {// метод возвращает горо
     )
 }
 
-fun getRussianCities(): List<Weather> {// метод возвращает русские города
+fun getRussianCities(): List<Weather> {
     return listOf(
             Weather(City("Москва", 55.755826, 37.617299900000035), 1, 2),
             Weather(City("Санкт-Петербург", 59.9342802, 30.335098600000038), 3, 3),
